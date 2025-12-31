@@ -21,14 +21,20 @@ This is more from the point of view of user or the service who has inititated th
 
 ### Tail Latency (things to look for)
 - means: P99, P95 meaning 99th percentile, 95th percentile, slowest 1% or slowest 5%.
-### Thread pool exhaustion: 1 slow request per second; blocks a thread; delays other request; soon threads will be exhausted; latency spike
-### "System is up but slow" complaints: after latency spike in above point, the logs and monitoring will tell you system is up but it is slow.
+### Thread pool exhaustion
+- 1 slow request per second
+- blocks a thread; delays other request-
+- soon threads will be exhausted
+- latency spike
+### "System is up but slow" complaints
+- after latency spike in above point
+- the logs and monitoring will tell you system is up but it is slow.
 
 ## Follow up after latency spiking
 - a bad design would be to scale the system, that will worsen the situation
 - scaling means adding more resources, more hops, more network calls, more tail latency sources, and more waiting.
 
-### **Scaling increased capacity doesn't always solve latency**
+### **Scaling increased capacity but doesn't always solve latency**
 
 ### Mental shift required to create better designs
 - Every network call must justify itself: every network call adds latency; adding failure chances; adding tail risk
