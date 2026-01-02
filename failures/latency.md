@@ -45,3 +45,6 @@ This is more from the point of view of user or the service who has inititated th
 - Complexity increases: system is up but slow, we do not know which part is adding that extra slowness (latency).
 - Harder debugging: now we have to monitor everything to know what is slow
 - Eventual consistency often required: due to latency we would be unable to make all the services consistent instanctly.
+
+### How to handle latency
+- timeouts: 
