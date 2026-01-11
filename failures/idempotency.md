@@ -15,6 +15,8 @@
 - does not know if response is failed
 - does not know if partial processed.
 
+### Idempotency helps to make difference between uncertainity and damage
+
 ## How we achieve idempotency
 - By detecting the duplicate requests
 - By using de-duplicate effect
